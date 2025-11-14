@@ -4,11 +4,10 @@ import "./globals.css";
 export const metadata = {
  title: {
     template: "%s - Built X",
-    default: "Built X - Content, Marketing, and Web Solutions",
+    default: "Built X - Content Marketing, Web Solutions, & Brand Strategy",
   },
   description:
-    "We are a premier digital agency specializing in content creation, strategic digital marketing, and bespoke web solutions."
-
+    "A premier content marketing agency delivering powerful brand strategy and bespoke web solutions to elevate your online presence.",
 };
 
 export default function Layout({ children }) {
