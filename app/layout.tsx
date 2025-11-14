@@ -10,7 +10,7 @@ export const metadata = {
     "A premier content marketing agency delivering powerful brand strategy and bespoke web solutions to elevate your online presence.",
 };
 
-export default function Layout({ children }) {
+export default function Layout({ children }: { children: React.ReactNode }) {
   return (
     <html
       lang="en"
