@@ -9,6 +9,15 @@ const viewport = { once: true, margin: "0px 0px -200px" };
 const FadeIn = (props) => {
   const shouldReduceMotion = useReducedMotion();
   const isInStaggerGroup = useContext(FadeInStaggerContext);
+
+  const motionProps = isInStaggerGroup
+    ? {}
+    : {
+        initial: "hidden",
+        whileInView: "visible",
+        viewport,
+      };
+
   return (
     <motion.div
       variants={{
@@ -16,13 +25,7 @@ const FadeIn = (props) => {
         visible: { opacity: 1, y: 0 },
       }}
       transition={{ duration: 0.5 }}
-      {...(isInStaggerGroup
-        ? {}
-        : {
-            initial: "hidden",
-            whileInView: "visible",
-            viewport,
-          })}
+      {...motionProps}
       {...props}
     />
   );
